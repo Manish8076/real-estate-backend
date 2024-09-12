@@ -22,7 +22,8 @@ mongoose.connect(process.env.MONGO)
 const app = express();
 
 const corsOptions = {
-    origin: "https://real-estate-frontend-liard.vercel.app/",
+    origin: "https://real-estate-frontend-ksi69qx1k-manish-singhs-projects-b1c87513.vercel.app/",
+
   };
 
 app.use(cors(corsOptions))
