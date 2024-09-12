@@ -23,7 +23,7 @@ const app = express();
 
 
 const corsOptions = {
-    origin: "https://real-estate-frontend-eta.vercel.app",
+    origin: "https://real-estate-frontend-eta.vercel.app/",
     credentials:true
   };
 
