@@ -23,7 +23,7 @@ const app = express();
 
 const corsOptions = {
     origin: "https://real-estate-frontend-ksi69qx1k-manish-singhs-projects-b1c87513.vercel.app/",
-
+    credentials:true
   };
 
 app.use(cors(corsOptions))
