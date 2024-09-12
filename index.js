@@ -19,28 +19,17 @@ mongoose.connect(process.env.MONGO)
 })
 
 
-
 const app = express();
 
 
 const corsOptions = {
-    origin: "*",
+    origin: "https://real-estate-frontend-eta.vercel.app",
     credentials:true
   };
 
 app.use(cors(corsOptions))
 
-const port = process.env.PORT || 3000;
 
-app.listen(port, ()=> {
-    console.log(`Server is running on ${port}`);
-    }
-);
-
-// This is not best practice
-// app.get('/test',  (req,res)=>{
-//     res.send("Hello world");
-// });
 
 app.get("/", (req,res)=>{
     res.send("Welcome to the homepage")
@@ -53,6 +42,12 @@ app.use('/api/auth', authRouter)
 app.use('/api/listing', listingRouter)
 
 
+const port = process.env.PORT || 3000;
+
+app.listen(port, ()=> {
+    console.log(`Server is running on ${port}`);
+    }
+);
 
 app.use((err,req,res,next) => {
     const statusCode = err.statusCode || 500;
