@@ -19,15 +19,12 @@ mongoose.connect(process.env.MONGO)
 })
 
 
+
 const app = express();
 
-const allowedOrigins = [
-    "https://real-estate-frontend-eta.vercel.app/",
-    "https://real-estate-frontend-manish-singhs-projects-b1c87513.vercel.app/",
 
-  ];
 const corsOptions = {
-    origin: "https://real-estate-frontend-eta.vercel.app/",
+    origin: "*",
     credentials:true
   };
 
